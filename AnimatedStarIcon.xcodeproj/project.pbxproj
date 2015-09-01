@@ -14,6 +14,7 @@
 		49A03C3A1B95C6E700C17237 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A03C391B95C6E700C17237 /* Images.xcassets */; };
 		49A03C3D1B95C6E700C17237 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A03C3B1B95C6E700C17237 /* LaunchScreen.xib */; };
 		49A03C491B95C6E700C17237 /* AnimatedStarIconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A03C481B95C6E700C17237 /* AnimatedStarIconTests.m */; };
+		49A03C551B95CA7400C17237 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A03C541B95CA7400C17237 /* StarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		49A03C421B95C6E700C17237 /* AnimatedStarIconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedStarIconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A03C471B95C6E700C17237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49A03C481B95C6E700C17237 /* AnimatedStarIconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedStarIconTests.m; sourceTree = "<group>"; };
+		49A03C531B95CA7400C17237 /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		49A03C541B95CA7400C17237 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 				49A03C311B95C6E700C17237 /* AppDelegate.m */,
 				49A03C331B95C6E700C17237 /* ViewController.h */,
 				49A03C341B95C6E700C17237 /* ViewController.m */,
+				49A03C521B95CA7400C17237 /* StarView */,
 				49A03C361B95C6E700C17237 /* Main.storyboard */,
 				49A03C391B95C6E700C17237 /* Images.xcassets */,
 				49A03C3B1B95C6E700C17237 /* LaunchScreen.xib */,
@@ -117,6 +121,15 @@
 				49A03C471B95C6E700C17237 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49A03C521B95CA7400C17237 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				49A03C531B95CA7400C17237 /* StarView.h */,
+				49A03C541B95CA7400C17237 /* StarView.m */,
+			);
+			path = StarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				49A03C351B95C6E700C17237 /* ViewController.m in Sources */,
 				49A03C321B95C6E700C17237 /* AppDelegate.m in Sources */,
+				49A03C551B95CA7400C17237 /* StarView.m in Sources */,
 				49A03C2F1B95C6E700C17237 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +426,7 @@
 				49A03C4E1B95C6E700C17237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49A03C4F1B95C6E700C17237 /* Build configuration list for PBXNativeTarget "AnimatedStarIconTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +435,7 @@
 				49A03C511B95C6E700C17237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,25 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-r3-VUx" customClass="StarView">
+                                <rect key="frame" x="135" y="105" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="WO2-qc-vql"/>
+                                    <constraint firstAttribute="width" secondItem="ugJ-r3-VUx" secondAttribute="height" multiplier="1:1" id="lj0-HF-8v3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-xZ-x9E" customClass="StarView">
+                                <rect key="frame" x="135" y="163" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kEl-xZ-x9E" secondAttribute="height" multiplier="1:1" id="fE6-ag-QaD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94c-PM-CFl" customClass="StarView">
+                                <rect key="frame" x="135" y="221" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="94c-PM-CFl" secondAttribute="height" multiplier="1:1" id="B8i-po-MfC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYA-l9-ZDA">
+                                <rect key="frame" x="126" y="425" width="68" height="30"/>
+                                <state key="normal" title="One more">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onemoreButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3yd-7U-Mkl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ugJ-r3-VUx" secondAttribute="centerX" id="5z1-By-JSt"/>
+                            <constraint firstAttribute="centerX" secondItem="94c-PM-CFl" secondAttribute="centerX" id="6V9-dc-Cfl"/>
+                            <constraint firstItem="ugJ-r3-VUx" firstAttribute="width" secondItem="kEl-xZ-x9E" secondAttribute="width" id="ED4-Hp-Rzu"/>
+                            <constraint firstAttribute="centerX" secondItem="kEl-xZ-x9E" secondAttribute="centerX" id="Gxc-jO-TPP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hYA-l9-ZDA" secondAttribute="bottom" constant="113" id="LHA-lW-shk"/>
+                            <constraint firstItem="ugJ-r3-VUx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="85" id="RVF-rS-kby"/>
+                            <constraint firstItem="kEl-xZ-x9E" firstAttribute="width" secondItem="94c-PM-CFl" secondAttribute="width" id="SEd-nK-wuk"/>
+                            <constraint firstAttribute="centerX" secondItem="hYA-l9-ZDA" secondAttribute="centerX" id="eFd-oC-3Vw"/>
+                            <constraint firstItem="94c-PM-CFl" firstAttribute="top" secondItem="kEl-xZ-x9E" secondAttribute="bottom" constant="8" id="fwe-Yg-d8l"/>
+                            <constraint firstItem="kEl-xZ-x9E" firstAttribute="top" secondItem="ugJ-r3-VUx" secondAttribute="bottom" constant="8" id="jDQ-js-a6r"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstView" destination="ugJ-r3-VUx" id="17L-Rx-W82"/>
+                        <outlet property="secondView" destination="kEl-xZ-x9E" id="G4a-gE-UCZ"/>
+                        <outlet property="thirdView" destination="94c-PM-CFl" id="A7K-bc-QTd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="210" y="231"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

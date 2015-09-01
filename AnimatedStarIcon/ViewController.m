@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    StarView *starView;
+}
 
 @end
 
@@ -16,12 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _firstView.starState = kStarUnselected;
+    
+    _secondView.starState = kStarAnimated;
+    
+    _thirdView.starState = kStarSelected;
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onemoreButtonPressed:(id)sender {
+    if (!starView) {
+        starView = [[StarView alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 50, 300, 100, 100)];
+        starView.starState = kStarUnselected;
+        [self.view addSubview:starView];
+    }
+    else {
+        starView.starState = starView.starState + 1;
+        [starView setNeedsDisplay];
+    }
+    
 }
 
 @end

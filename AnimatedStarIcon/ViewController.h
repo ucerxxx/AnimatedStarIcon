@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StarView.h"
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet StarView *firstView;
+@property (strong, nonatomic) IBOutlet StarView *secondView;
+@property (strong, nonatomic) IBOutlet StarView *thirdView;
 
+- (IBAction)onemoreButtonPressed:(id)sender;
 @end
 
